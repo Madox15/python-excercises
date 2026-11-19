@@ -57,11 +57,3 @@ class Square(Rectangle):
 
     def __str__(self):
         return f"Square(side={self.width})"
-
-
-"""set_width: Overrides the set_width method from the Rectangle class. It should set the width and height to the side length.
-set_height: Overrides the set_height method from the Rectangle class. It should set the width and height to the side length.
-set_side: Sets the height and width of the square equal to the side length.
-The Square class should be able to access the Rectangle class methods.
-
-If an instance of a Square is represented as a string, it should look like: Square(side=9)."""

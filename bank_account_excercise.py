@@ -17,7 +17,7 @@ class Account(ABC):
         self._balance = value
 
     def deposit(self, value) -> None:
-        if value < 0:
+        if value <= 0:
             raise ValueError("Deposit has to be positive")
         self.balance += value
 
@@ -34,22 +34,16 @@ class Account(ABC):
         pass
 
     def apply_monthly_fee(self):
-        if self.monthly_fee() > self.balance:
-            # print("Insufficient funds to apply monthly fee")
-            return False
-        self.balance -= self.monthly_fee()
-        return True
+        return self.withdraw(self.monthly_fee())
 
     def __str__(self):
         return f"{self.owner}: {self.balance:.2f} PLN"
 
 
 class CheckingAccount(Account):
-    def __init__(self, owner, balance):
-        super().__init__(owner, balance)
 
     def monthly_fee(self):
-        if self.balance > 1000:
+        if self.balance >= 1000:
             return 0
         else:
             return 10
@@ -57,23 +51,23 @@ class CheckingAccount(Account):
 
 if __name__ == "__main__":
     acc = CheckingAccount("Anna", 500)
-print(acc)  # Anna: 500.00 PLN
-acc.deposit(600)
-print(acc.monthly_fee())  # 0
-print(acc.apply_monthly_fee())  # True
-acc.withdraw(700)
-print(acc.monthly_fee())  # 10
-print(acc.apply_monthly_fee())  # True
-print(acc)  # Anna: 390.00 PLN
-print(acc.withdraw(1000))  # False
-print(acc.balance)  # 390
+    print(acc)  # Anna: 500.00 PLN
+    acc.deposit(600)
+    print(acc.monthly_fee())  # 0
+    print(acc.apply_monthly_fee())  # True
+    acc.withdraw(700)
+    print(acc.monthly_fee())  # 10
+    print(acc.apply_monthly_fee())  # True
+    print(acc)  # Anna: 390.00 PLN
+    print(acc.withdraw(1000))  # False
+    print(acc.balance)  # 390
 
-try:
-    acc.balance = -5
-except ValueError:
-    print("OK")  # OK
+    try:
+        acc.balance = -5
+    except ValueError:
+        print("OK")  # OK
 
-try:
-    Account("x", 1)
-except TypeError:
-    print("abstract OK")  # abstract OK
+    try:
+        Account("x", 1)
+    except TypeError:
+        print("abstract OK")  # abstract OK

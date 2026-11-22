@@ -9,6 +9,7 @@ Python practice projects from my learning path.
 | `class_interactions_exercise.py` | Interactions between classes                                    | Exercise generated with Claude (AI), solved by me                     |
 | `encapsulation_exercise.py`      | Encapsulation (private attributes, getters/setters)             | Exercise generated with Claude (AI), solved by me                     |
 | `bank_account_excercise.py`      | Abstraction, getters/setters                                    | Exercise generated with Claude (AI), solved by me                     |
+| `linked_list.py`                 | Linked list                                                     | freeCodeCamp workshop                                                 |
 
 ## Running
 

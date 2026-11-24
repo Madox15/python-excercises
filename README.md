@@ -10,6 +10,7 @@ Python practice projects from my learning path.
 | `encapsulation_exercise.py`      | Encapsulation (private attributes, getters/setters)             | Exercise generated with Claude (AI), solved by me                     |
 | `bank_account_excercise.py`      | Abstraction, getters/setters                                    | Exercise generated with Claude (AI), solved by me                     |
 | `linked_list.py`                 | Linked list                                                     | freeCodeCamp workshop                                                 |
+| `hash_table.py`                  | Hash table using nested dictionaries                            | freeCodeCamp certification project (Scientific Computing with Python) |
 
 ## Running
 

@@ -11,6 +11,7 @@ Python practice projects from my learning path.
 | `bank_account_excercise.py`      | Abstraction, getters/setters                                    | Exercise generated with Claude (AI), solved by me                     |
 | `linked_list.py`                 | Linked list                                                     | freeCodeCamp workshop                                                 |
 | `hash_table.py`                  | Hash table using nested dictionaries                            | freeCodeCamp certification project (Scientific Computing with Python) |
+| `range_of_numbers.py`            | Recursion excercise                                             | freeCodeCamp lab + some other common recursion algorithms             |
 
 ## Running
 

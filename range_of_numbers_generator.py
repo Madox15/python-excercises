@@ -9,18 +9,19 @@ def range_of_numbers(start_num, end_num):
     return count_list
 
 
-# other excercises
+# other exercises
 
 
-def go_down(start, end):
+def range_of_numbers_upwards(start, end):
     if start > end:
         return []
-    list = go_down(start + 1, end)
+    list = range_of_numbers_upwards(start + 1, end)
     list.append(start)
     return list
 
 
-print(go_down(1, 15))
+if __name__ == "__main__":
+    print(range_of_numbers_upwards(1, 15))
 
 
 def power(num):
@@ -29,7 +30,8 @@ def power(num):
     return num * power(num - 1)
 
 
-print(power(5))
+if __name__ == "__main__":
+    print(power(5))
 
 
 def fibonacci(num):  # returns nth element in the fibonacci sequence
@@ -38,4 +40,5 @@ def fibonacci(num):  # returns nth element in the fibonacci sequence
     return fibonacci(num - 1) + fibonacci(num - 2)
 
 
-print(fibonacci(5))
+if __name__ == "__main__":
+    print(fibonacci(5))

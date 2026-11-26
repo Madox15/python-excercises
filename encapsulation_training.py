@@ -29,19 +29,20 @@ class Thermostat:
         return f"Room: {self.temp}°C, target: {self.get_target()}"
 
 
-t = Thermostat(22)
-print(t)  # Room: 20°C, target: 22°C
-t.tick()
-t.tick()
-t.tick()
-print(t)  # Room: 22°C, target: 22°C
-print(t.set_target(50))  # False
-print(t.get_target())  # 22
-print(t.set_target(15))  # True
-t.tick()
-print(t)  # Room: 21°C, target: 15°C
+if __name__ == "__main__":
+    t = Thermostat(22)
+    print(t)  # Room: 20°C, target: 22°C
+    t.tick()
+    t.tick()
+    t.tick()
+    print(t)  # Room: 22°C, target: 22°C
+    print(t.set_target(50))  # False
+    print(t.get_target())  # 22
+    print(t.set_target(15))  # True
+    t.tick()
+    print(t)  # Room: 21°C, target: 15°C
 
-try:
-    Thermostat(5)
-except ValueError:
-    print("OK")  # OK
+    try:
+        Thermostat(5)
+    except ValueError:
+        print("OK")  # OK

@@ -38,7 +38,7 @@ class Member:
             return True
 
     def give_back(self, book):
-        if not book in self._books:
+        if book not in self._books:
             return False
         else:
             book.take_back()
@@ -72,31 +72,32 @@ class Library:
         return report.rstrip("\n")
 
 
-dune = Book("Dune", "Herbert")
-emma = Book("Emma", "Austen")
-ulysses = Book("Ulysses", "Joyce")
+if __name__ == "__main__":
+    dune = Book("Dune", "Herbert")
+    emma = Book("Emma", "Austen")
+    ulysses = Book("Ulysses", "Joyce")
 
-lib = Library()
-lib.add_book(dune)
-lib.add_book(emma)
-lib.add_book(ulysses)
+    lib = Library()
+    lib.add_book(dune)
+    lib.add_book(emma)
+    lib.add_book(ulysses)
 
-anna = Member("Anna")
+    anna = Member("Anna")
 
-print(lib.lend("Dune", anna))  # Dune lent to Anna
-print(lib.lend("Dune", Member("Jan")))  # Cannot lend
-print(lib.lend("Hamlet", anna))  # No such book
-print(lib.lend("Emma", anna))  # Emma lent to Anna
-print(lib.lend("Ulysses", anna))  # Cannot lend
-print(dune)  # Dune by Herbert (borrowed by Anna)
-print(anna.give_back(ulysses))  # False
-print(anna.give_back(dune))  # True
-print(dune)  # Dune by Herbert (available)
-print(lib.report())
-# Dune by Herbert (available)
-# Emma by Austen (borrowed by Anna)
-# Ulysses by Joyce (available)
+    print(lib.lend("Dune", anna))  # Dune lent to Anna
+    print(lib.lend("Dune", Member("Jan")))  # Cannot lend
+    print(lib.lend("Hamlet", anna))  # No such book
+    print(lib.lend("Emma", anna))  # Emma lent to Anna
+    print(lib.lend("Ulysses", anna))  # Cannot lend
+    print(dune)  # Dune by Herbert (borrowed by Anna)
+    print(anna.give_back(ulysses))  # False
+    print(anna.give_back(dune))  # True
+    print(dune)  # Dune by Herbert (available)
+    print(lib.report())
+    # Dune by Herbert (available)
+    # Emma by Austen (borrowed by Anna)
+    # Ulysses by Joyce (available)
 
-books = anna.get_books()
-books.clear()
-print(len(anna.get_books()))  # 1
+    books = anna.get_books()
+    books.clear()
+    print(len(anna.get_books()))  # 1

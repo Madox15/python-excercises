@@ -25,4 +25,11 @@ class Pawn(Player):
         self.moves = [(0, 1), (1, 0), (0, -1), (-1, 0)]
 
     def level_up(self):
-        self.moves.append[(1, 1), (1, -1), (-1, 1), (-1, -1)]
+        self.moves.extend([(1, 1), (1, -1), (-1, 1), (-1, -1)])
+
+
+if __name__ == "__main__":
+    pawn = Pawn()
+    pawn.level_up()
+    pawn.make_move()
+    print(pawn.moves)

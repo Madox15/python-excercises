@@ -8,10 +8,10 @@ Python practice projects from my learning path.
 | `player_interface.py`            | Abstraction (abstract base classes / interface)                 | freeCodeCamp lab                                                      |
 | `class_interactions_exercise.py` | Interactions between classes                                    | Exercise generated with Claude (AI), solved by me                     |
 | `encapsulation_exercise.py`      | Encapsulation (private attributes, getters/setters)             | Exercise generated with Claude (AI), solved by me                     |
-| `bank_account_excercise.py`      | Abstraction, getters/setters                                    | Exercise generated with Claude (AI), solved by me                     |
+| `bank_account_exercise.py`       | Abstraction, getters/setters                                    | Exercise generated with Claude (AI), solved by me                     |
 | `linked_list.py`                 | Linked list                                                     | freeCodeCamp workshop                                                 |
 | `hash_table.py`                  | Hash table using nested dictionaries                            | freeCodeCamp certification project (Scientific Computing with Python) |
-| `range_of_numbers.py`            | Recursion excercise                                             | freeCodeCamp lab + some other common recursion algorithms             |
+| `range_of_numbers.py`            | Recursion exercise                                              | freeCodeCamp lab + some other common recursion algorithms             |
 
 ## Running
 

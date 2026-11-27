@@ -12,6 +12,7 @@ Python practice projects from my learning path.
 | `linked_list.py`                 | Linked list                                                     | freeCodeCamp workshop                                                 |
 | `hash_table.py`                  | Hash table using nested dictionaries                            | freeCodeCamp certification project (Scientific Computing with Python) |
 | `range_of_numbers_generator.py`  | Recursion exercise                                              | freeCodeCamp lab + some other common recursion algorithms             |
+| `binary_search.py`               | Binary search algorithm                                         | freeCodeCamp lab                                                      |
 
 ## Running
 

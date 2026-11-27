@@ -22,7 +22,7 @@ class Account(ABC):
         self.balance += value
 
     def withdraw(self, value) -> bool:
-        if value <= 0:
+        if value < 0:
             raise ValueError("Withdraw has to be positive")
         if value > self.balance:
             return False

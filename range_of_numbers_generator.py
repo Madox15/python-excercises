@@ -20,18 +20,10 @@ def range_of_numbers_upwards(start, end):
     return list
 
 
-if __name__ == "__main__":
-    print(range_of_numbers_upwards(1, 15))
-
-
 def power(num):
     if num == 1:
         return 1
     return num * power(num - 1)
-
-
-if __name__ == "__main__":
-    print(power(5))
 
 
 def fibonacci(num):  # returns nth element in the fibonacci sequence
@@ -41,4 +33,6 @@ def fibonacci(num):  # returns nth element in the fibonacci sequence
 
 
 if __name__ == "__main__":
+    print(range_of_numbers_upwards(1, 15))
+    print(power(5))
     print(fibonacci(5))
